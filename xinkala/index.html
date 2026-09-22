@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>辛卡拉-中国领先的工业自动化与智能控制系统解决方案服务商</title>
+    <meta name="description" content="辛卡拉专注于工业自动化控制系统、智能仪表及物联网解决方案。提供精准的流量计、压力变送器及工业总线产品，助力企业实现数字化转型与高效生产。">
+    <meta name="keywords" content="辛卡拉, 工业自动化, 流量计, 智能控制, 物联网, 自动化设备, 辛卡拉官网">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #0056b3;
+            --secondary-color: #003d80;
+            --accent-color: #00a8e8;
+            --text-dark: #1a1a1a;
+            --text-gray: #666666;
+            --bg-light: #f8f9fa;
+            --white: #ffffff;
+            --border-color: #e0e0e0;
+            --spacing-unit: 8px;
+            --container-width: 1200px;
+            --header-height: 70px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--white);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Utility Classes */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 24px;
+            border-radius: 4px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: var(--white);
+            border: 1px solid var(--primary-color);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--secondary-color);
+            border-color: var(--secondary-color);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: var(--primary-color);
+            border: 1px solid var(--primary-color);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+
+        .section-padding {
+            padding: 60px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 2rem;
+            color: var(--text-dark);
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background-color: var(--accent-color);
+            margin: 10px auto 0;
+        }
+
+        .section-title p {
+            color: var(--text-gray);
+            font-size: 1.1rem;
+        }
+
+        /* Header */
+        header {
+            height: var(--header-height);
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100%;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--text-dark);
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-menu a {
+            font-size: 1rem;
+            color: var(--text-dark);
+            font-weight: 500;
+        }
+
+        .nav-menu a:hover {
+            color: var(--accent-color);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            margin-top: var(--header-height);
+            background: linear-gradient(135deg, #f0f7ff 0%, #ffffff 100%);
+            padding: 100px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50px;
+            right: -50px;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(0,168,232,0.1) 0%, rgba(255,255,255,0) 70%);
+            border-radius: 50%;
+        }
+
+        .hero-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 50px;
+        }
+
+        .hero-text {
+            flex: 1;
+        }
+
+        .hero-text h1 {
+            font-size: 3rem;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            color: var(--text-dark);
+        }
+
+        .hero-text h1 span {
+            color: var(--primary-color);
+        }
+
+        .hero-text p {
+            font-size: 1.2rem;
+            color: var(--text-gray);
+            margin-bottom: 30px;
+            max-width: 600px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .hero-image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+
+        .hero-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        /* Features Section */
+        .features {
+            background-color: var(--white);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            padding: 30px;
+            border-radius: 8px;
+            background: var(--bg-light);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            background: var(--white);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+
+        .feature-card h3 {
+            margin-bottom: 15px;
+            font-size: 1.25rem;
+        }
+
+        .feature-card p {
+            color: var(--text-gray);
+            font-size: 0.95rem;
+        }
+
+        /* Products Section */
+        .products {
+            background-color: var(--bg-light);
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .product-card {
+            background: var(--white);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: box-shadow 0.3s ease;
+        }
+
+        .product-card:hover {
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+
+        .product-img {
+            width: 100%;
+            height: 200px;
+            background-color: #ddd;
+            object-fit: cover;
+        }
+
+        .product-info {
+            padding: 25px;
+        }
+
+        .product-tag {
+            display: inline-block;
+            background-color: #e6f7ff;
+            color: var(--primary-color);
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin-bottom: 10px;
+        }
+
+        .product-info h3 {
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+
+        .product-info p {
+            color: var(--text-gray);
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+        }
+
+        .product-link {
+            color: var(--primary-color);
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .product-link::after {
+            content: '→';
+            margin-left: 5px;
+            transition: margin-left 0.3s ease;
+        }
+
+        .product-link:hover::after {
+            margin-left: 10px;
+        }
+
+        /* Application Scenarios */
+        .scenarios {
+            background-color: var(--white);
+        }
+
+        .scenario-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .scenario-item {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+            padding: 20px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+        }
+
+        .scenario-icon {
+            width: 50px;
+            height: 50px;
+            background-color: var(--primary-color);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .scenario-content h4 {
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+        }
+
+        .scenario-content p {
+            color: var(--text-gray);
+            font-size: 0.95rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1a1a1a;
+            color: #ccc;
+            padding: 60px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-brand h3 {
+            color: var(--white);
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+
+        .footer-brand p {
+            max-width: 300px;
+            font-size: 0.9rem;
+            line-height: 1.8;
+        }
+
+        .footer-col h4 {
+            color: var(--white);
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            font-size: 0.9rem;
+            color: #999;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--white);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #333;
+            padding-top: 20px;
+            text-align: center;
+            font-size: 0.85rem;
+            color: #666;
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .hero-content {
+                flex-direction: column-reverse;
+                text-align: center;
+            }
+
+            .hero-text p {
+                margin: 0 auto 30px;
+            }
+
+            .hero-buttons {
+                justify-content: center;
+            }
+
+            .scenario-list {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: var(--header-height);
+                left: 0;
+                right: 0;
+                background-color: var(--white);
+                padding: 20px;
+                box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .footer-brand p {
+                margin: 0 auto;
+            }
+
+            .hero-text h1 {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <a href="#" class="logo">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="#0056b3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M2 17L12 22L22 17" stroke="#0056b3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M2 12L12 17L22 12" stroke="#0056b3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span>辛卡拉</span>
+            </a>
+            <nav>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#home">首页</a></li>
+                    <li><a href="#products">核心产品</a></li>
+                    <li><a href="#solutions">解决方案</a></li>
+                    <li><a href="#about">关于我们</a></li>
+                    <li><a href="#contact">联系我们</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu-btn" id="mobileMenuBtn">☰</div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <h1>赋能工业智能，<br><span>驱动未来生产</span></h1>
+                    <p>辛卡拉致力于为工业领域提供高精度、高可靠性的自动化控制系统与智能仪表。我们以技术创新为核心，助力企业实现数字化转型与高效生产管理。</p>
+                    <div class="hero-buttons">
+                        <a href="#products" class="btn btn-primary">探索产品</a>
+                        <a href="#contact" class="btn btn-outline">获取方案</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="https://picsum.photos/seed/sincara_hero/600/400" alt="辛卡拉工业自动化控制中心">
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="section-padding features">
+            <div class="container">
+                <div class="section-title">
+                    <h2>核心优势</h2>
+                    <p>为什么选择辛卡拉作为您的工业合作伙伴</p>
+                </div>
+                <div class="features-grid">
+                    <article class="feature-card">
+                        <div class="feature-icon">⚡</div>
+                        <h3>精准控制</h3>
+                        <p>采用先进的传感技术与算法，实现毫秒级响应与精准调节，确保生产过程稳定性。</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-icon">🛡️</div>
+                        <h3>安全可靠</h3>
+                        <p>通过多重冗余设计与严苛的工业级测试，产品在恶劣环境下依然能稳定运行。</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-icon">🤖</div>
+                        <h3>智能互联</h3>
+                        <p>支持多种工业通讯协议，无缝对接MES、ERP系统，构建全厂数字化网络。</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-icon">🔧</div>
+                        <h3>定制服务</h3>
+                        <p>根据客户特定工艺需求，提供从设计、选型到安装调试的全流程定制服务。</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section class="section-padding products" id="products">
+            <div class="container">
+                <div class="section-title">
+                    <h2>核心产品系列</h2>
+                    <p>覆盖流体计量、过程控制及工业物联网的高端设备</p>
+                </div>
+                <div class="product-grid">
+                    <article class="product-card">
+                        <img src="https://picsum.photos/seed/flow_meter/400/250" alt="超声波流量计" class="product-img">
+                        <div class="product-info">
+                            <span class="product-tag">流量测量</span>
+                            <h3>超声波智能流量计</h3>
+                            <p>适用于水、油、气等多种介质的精确测量，具备防震、防干扰功能，精度达0.5级。</p>
+                            <a href="#" class="product-link">查看详情</a>
+                        </div>
+                    </article>
+                    <article class="product-card">
+                        <img src="https://picsum.photos/seed/pressure_sensor/400/250" alt="压力变送器" class="product-img">
+                        <div class="product-info">
+                            <span class="product-tag">过程控制</span>
+                            <h3>高精度压力变送器</h3>
+                            <p>采用电容式传感技术，抗过载能力强，输出信号稳定，专为化工、石油行业打造。</p>
+                            <a href="#" class="product-link">查看详情</a>
+                        </div>
+                    </article>
+                    <article class="product-card">
+                        <img src="https://picsum.photos/seed/PLC_system/400/250" alt="工业控制系统" class="product-img">
+                        <div class="product-info">
+                            <span class="product-tag">自动化控制</span>
+                            <h3>PLC可编程逻辑控制器</h3>
+                            <p>模块化设计，支持丰富的扩展功能，满足复杂逻辑控制与数据采集需求。</p>
+                            <a href="#" class="product-link">查看详情</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Solutions Section -->
+        <section class="section-padding scenarios" id="solutions">
+            <div class="container">
+                <div class="section-title">
+                    <h2>应用场景</h2>
+                    <p>广泛应用于能源、化工、水务及智能制造领域</p>
+                </div>
+                <div class="scenario-list">
+                    <div class="scenario-item">
+                        <div class="scenario-icon">🏭</div>
+                        <div class="scenario-content">
+                            <h4>智能制造工厂</h4>
+                            <p>通过部署自动化产线与智能仪表，实现生产数据实时采集与远程监控，提升良品率。</p>
+                        </div>
+                    </div>
+                    <div class="scenario-item">
+                        <div class="scenario-icon">💧</div>
+                        <div class="scenario-content">
+                            <h4>城市供水管网</h4>
+                            <p>利用智能流量计与压力监测系统，优化管网调度，降低漏损率，保障供水安全。</p>
+                        </div>
+                    </div>
+                    <div class="scenario-item">
+                        <div class="scenario-icon">🛢️</div>
+                        <div class="scenario-content">
+                            <h4>石油化工生产</h4>
+                            <p>在高温高压环境下提供可靠的测量与控制方案，确保高危工艺流程的安全运行。</p>
+                        </div>
+                    </div>
+                    <div class="scenario-item">
+                        <div class="scenario-icon">🌱</div>
+                        <div class="scenario-content">
+                            <h4>环保污水处理</h4>
+                            <p>精准计量进出水流量与药剂投加量，辅助污水处理厂实现精细化运营管理。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About/CTA Section -->
+        <section class="section-padding" style="background-color: var(--primary-color); color: white; text-align: center;">
+            <div class="container">
+                <h2 style="margin-bottom: 20px; font-size: 2rem;">准备好升级您的工业系统了吗？</h2>
+                <p style="margin-bottom: 30px; opacity: 0.9; font-size: 1.1rem;">联系辛卡拉专家团队，获取免费的技术评估与定制化方案建议。</p>
+                <a href="#contact" class="btn" style="background-color: white; color: var(--primary-color);">立即咨询</a>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>辛卡拉</h3>
+                    <p>专注于工业自动化与智能控制领域，致力于为全球客户提供高品质的产品与解决方案，推动工业4.0进程。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>产品中心</h4>
+                    <ul>
+                        <li><a href="#">智能流量计</a></li>
+                        <li><a href="#">压力变送器</a></li>
+                        <li><a href="#">温度控制器</a></li>
+                        <li><a href="#">执行机构</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>解决方案</h4>
+                    <ul>
+                        <li><a href="#">智慧水务</a></li>
+                        <li><a href="#">化工过程控制</a></li>
+                        <li><a href="#">能源管理系统</a></li>
+                        <li><a href="#">工厂自动化</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>联系我们</h4>
+                    <ul>
+                        <li>电话：400-123-4567</li>
+                        <li>邮箱：info@sincara.com</li>
+                        <li>地址：中国·XX市高新技术开发区科技园88号</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 辛卡拉 版权所有 | 工业自动化与智能控制系统服务商</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navMenu = document.getElementById('navMenu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+
+        // Close menu when clicking a link
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+            });
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
