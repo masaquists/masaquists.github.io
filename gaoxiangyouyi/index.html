@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="高相佑一官方网站与作品展示。收录高相佑一的经典电影、电视剧及代表作品，提供详细的作品介绍、剧情简介及观影指南。">
+    <meta name="keywords" content="高相佑一, 高佑一, 韩国演员, 高相佑一电影, 高佑一电视剧, 韩国电影, 恋爱小说, 恋爱小说电影">
+    <title>高相佑一-经典韩国影视作品与演员资料展示</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #1a1a1a;
+            --accent-color: #d4af37;
+            --bg-color: #f9f9f9;
+            --card-bg: #ffffff;
+            --text-main: #333333;
+            --text-secondary: #666666;
+            --spacing-unit: 1rem;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* Header */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            letter-spacing: -0.5px;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            font-weight: 500;
+            font-size: 1rem;
+            color: var(--text-main);
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--accent-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 500px;
+            background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url('https://picsum.photos/seed/kyo/1920/1080');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            padding: 2rem;
+            animation: fadeIn 1s ease-out;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            background-color: var(--accent-color);
+            color: #fff;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+
+        .btn:hover {
+            background-color: #b5952f;
+            transform: translateY(-2px);
+        }
+
+        /* Section Styling */
+        section {
+            padding: 4rem 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-header h2 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+        }
+
+        .section-header p {
+            color: var(--text-secondary);
+        }
+
+        /* Biography */
+        .bio-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 3rem;
+            align-items: start;
+        }
+
+        .profile-card {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            text-align: center;
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 1.5rem;
+            border: 3px solid var(--accent-color);
+        }
+
+        .profile-info h3 {
+            margin-bottom: 0.5rem;
+        }
+
+        .profile-info .role {
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .bio-text p {
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+
+        /* Filmography */
+        .film-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .film-card {
+            background: var(--card-bg);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .film-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .film-poster {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            background-color: #eee;
+        }
+
+        .film-content {
+            padding: 1.5rem;
+        }
+
+        .film-year {
+            font-size: 0.85rem;
+            color: var(--accent-color);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .film-title {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+        }
+
+        .film-desc {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        /* Works List (Television) */
+        .works-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .work-item {
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 8px;
+            display: flex;
+            gap: 1.5rem;
+            align-items: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        }
+
+        .work-year {
+            background-color: #f0f0f0;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            white-space: nowrap;
+        }
+
+        .work-info h4 {
+            font-size: 1.1rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .work-info p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 3rem 0;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+
+        .footer-col h4 {
+            margin-bottom: 1.5rem;
+            color: var(--accent-color);
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-col ul li a {
+            color: #ccc;
+        }
+
+        .footer-col ul li a:hover {
+            color: #fff;
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid #333;
+            color: #888;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                height: auto;
+                padding: 1rem 0;
+            }
+            nav ul {
+                margin-top: 1rem;
+                gap: 1rem;
+                font-size: 0.9rem;
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .bio-grid {
+                grid-template-columns: 1fr;
+            }
+            .work-item {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-container">
+            <a href="#" class="logo">高相佑一<span>Guide</span></a>
+            <nav>
+                <ul>
+                    <li><a href="#about" class="active">关于演员</a></li>
+                    <li><a href="#movies">电影作品</a></li>
+                    <li><a href="#drama">电视剧作</a></li>
+                    <li><a href="#gallery">剧照图集</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>高相佑一</h1>
+                <p>韩国资深演员，以细腻的演技和独特的银幕魅力，诠释了无数深入人心的角色。从文艺片到商业巨制，他的演艺生涯记录了韩国电影的黄金时代。</p>
+                <a href="#movies" class="btn">探索作品</a>
+            </div>
+        </section>
+
+        <section id="about" class="container">
+            <div class="section-header">
+                <h2>关于高相佑一</h2>
+                <p>深入了解这位韩国影坛常青树的艺术生涯</p>
+            </div>
+            <div class="bio-grid">
+                <div class="profile-card">
+                    <img src="https://picsum.photos/seed/kyo_actor/300/300" alt="高相佑一照片" class="profile-img">
+                    <h3>高相佑一</h3>
+                    <span class="role">演员 / 导演</span>
+                    <p style="margin-top: 1rem; color: #666;">出生于韩国首尔，毕业于中央大学电影系。</p>
+                </div>
+                <div class="profile-info">
+                    <h3>演艺经历</h3>
+                    <div class="bio-text">
+                        <p>高相佑一（Kyo Goo），韩国著名男演员。他以其独特的阴郁气质和极具爆发力的演技在韩国影坛占据一席之地。出道初期，他多以配角身份活跃于电视剧中，逐渐凭借在电影《恋爱小说》中的出色表现被观众熟知。</p>
+                        <p>他的表演风格多变，既能驾驭文艺片中的深沉内敛，也能在商业喜剧中展现幽默感。多年来，他参演了超过50部影视作品，是韩国电影界不可多得的实力派演员。</p>
+                        <p>除了演员身份，他也尝试过导演工作，对电影艺术的探索从未停止。他的作品往往聚焦于普通人的情感纠葛与生活困境，具有强烈的人文关怀。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="movies" class="container" style="background-color: #fff; border-radius: 12px; padding: 3rem;">
+            <div class="section-header">
+                <h2>精选电影作品</h2>
+                <p>高相佑一最具代表性的银幕角色回顾</p>
+            </div>
+            <div class="film-grid">
+                <!-- Film 1 -->
+                <article class="film-card">
+                    <img src="https://picsum.photos/seed/love_ps/400/600" alt="恋爱小说海报" class="film-poster">
+                    <div class="film-content">
+                        <span class="film-year">2002</span>
+                        <h3 class="film-title">恋爱小说</h3>
+                        <p class="film-desc">改编自同名畅销小说，讲述三个年轻人之间错综复杂的情感故事。高相佑一在片中饰演深情而内敛的角色，是影片的核心看点之一。</p>
+                    </div>
+                </article>
+
+                <!-- Film 2 -->
+                <article class="film-card">
+                    <img src="https://picsum.photos/seed/ghost/400/600" alt="不可饶恕的海报" class="film-poster">
+                    <div class="film-content">
+                        <span class="film-year">2004</span>
+                        <h3 class="film-title">不可饶恕</h3>
+                        <p class="film-desc">一部探讨人性与复仇的悬疑惊悚片。高相佑一挑战了复杂的心理状态，其细腻的微表情处理获得了评论界的高度评价。</p>
+                    </div>
+                </article>
+
+                <!-- Film 3 -->
+                <article class="film-card">
+                    <img src="https://picsum.photos/seed/midnight/400/600" alt="午夜杀人狂海报" class="film-poster">
+                    <div class="film-content">
+                        <span class="film-year">2006</span>
+                        <h3 class="film-title">午夜杀人狂</h3>
+                        <p class="film-desc">黑色幽默风格的惊悚喜剧。他在片中饰演一名陷入疯狂边缘的作家，表演张力十足，令人印象深刻。</p>
+                    </div>
+                </article>
+
+                <!-- Film 4 -->
+                <article class="film-card">
+                    <img src="https://picsum.photos/seed/family/400/600" alt="家庭秘密海报" class="film-poster">
+                    <div class="film-content">
+                        <span class="film-year">2010</span>
+                        <h3 class="film-title">家庭秘密</h3>
+                        <p class="film-desc">一部温馨感人的家庭伦理剧。高相佑一在片中展现了温柔体贴的一面，诠释了作为丈夫和父亲的责任与爱。</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="drama" class="container">
+            <div class="section-header">
+                <h2>代表电视剧作</h2>
+                <p>荧屏上的精彩演绎</p>
+            </div>
+            <div class="works-list">
+                <div class="work-item">
+                    <span class="work-year">2000</span>
+                    <div class="work-info">
+                        <h4>蓝色生死恋 (蓝色生死恋)</h4>
+                        <p>饰演配角：崔允，展现了早期青涩的演技。</p>
+                    </div>
+                </div>
+                <div class="work-item">
+                    <span class="work-year">2003</span>
+                    <div class="work-info">
+                        <h4>夏日香气 (夏日香气)</h4>
+                        <p>饰演男主角好友，为影片增色不少。</p>
+                    </div>
+                </div>
+                <div class="work-item">
+                    <span class="work-year">2008</span>
+                    <div class="work-info">
+                        <h4>爱在哈佛 (爱在哈佛)</h4>
+                        <p>饰演配角：李汉书，再次证明其在商业剧中的受欢迎程度。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="gallery" class="container">
+            <div class="section-header">
+                <h2>剧照欣赏</h2>
+                <p>捕捉光影中的瞬间</p>
+            </div>
+            <div class="film-grid">
+                <img src="https://picsum.photos/seed/kyo1/400/300" alt="剧照 1" style="width:100%; border-radius:4px;">
+                <img src="https://picsum.photos/seed/kyo2/400/300" alt="剧照 2" style="width:100%; border-radius:4px;">
+                <img src="https://picsum.photos/seed/kyo3/400/300" alt="剧照 3" style="width:100%; border-radius:4px;">
+                <img src="https://picsum.photos/seed/kyo4/400/300" alt="剧照 4" style="width:100%; border-radius:4px;">
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4>关于我们</h4>
+                    <p style="color: #ccc; font-size: 0.9rem;">本站致力于为影迷提供高相佑一先生的影视作品资料整理与欣赏平台，内容仅供参考。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速导航</h4>
+                    <ul>
+                        <li><a href="#about">演员简介</a></li>
+                        <li><a href="#movies">电影列表</a></li>
+                        <li><a href="#drama">电视剧集</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>友情链接</h4>
+                    <ul>
+                        <li><a href="#">韩国电影资料馆</a></li>
+                        <li><a href="#">IMDb</a></li>
+                        <li><a href="#">豆瓣电影</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 高相佑一影迷站. All Rights Reserved. 本页面为非官方粉丝整理站。</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
