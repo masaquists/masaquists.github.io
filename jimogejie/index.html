@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>寂寞哥解说英雄联盟-热门游戏解说与攻略分享平台</title>
+    <meta name="description" content="寂寞哥解说英雄联盟，提供最新游戏资讯、英雄攻略、精彩集锦及排位上分技巧。关注寂寞哥，获取第一手游戏动态与战术分析。">
+    <meta name="keywords" content="寂寞哥解说英雄联盟,寂寞哥,英雄联盟解说,LOL攻略,游戏视频,电竞资讯">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #00ff9d;
+            --primary-hover: #00cc7d;
+            --bg-dark: #0f0f12;
+            --bg-card: #1a1a20;
+            --bg-nav: rgba(15, 15, 18, 0.95);
+            --text-main: #ffffff;
+            --text-secondary: #a0a0a0;
+            --accent-red: #ff4d4d;
+            --accent-blue: #4d94ff;
+            --spacing-unit: 16px;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* 布局容器 */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* 导航栏 */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 70px;
+            background-color: var(--bg-nav);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--text-main);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-size: 16px;
+            font-weight: 500;
+            color: var(--text-secondary);
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        .search-bar {
+            display: flex;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+            padding: 5px 10px;
+        }
+
+        .search-bar input {
+            background: transparent;
+            border: none;
+            color: var(--text-main);
+            outline: none;
+            width: 150px;
+        }
+
+        .search-bar button {
+            background: transparent;
+            border: none;
+            color: var(--text-secondary);
+            cursor: pointer;
+        }
+
+        /* Hero 区域 */
+        .hero {
+            margin-top: 70px;
+            height: 500px;
+            background: linear-gradient(135deg, rgba(15, 15, 18, 0.8), rgba(15, 15, 18, 0.4)), url('https://picsum.photos/seed/lolhero/1920/1080.jpg') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
+        .hero-content {
+            max-width: 600px;
+            animation: fadeIn Up 0.8s ease-out;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            line-height: 1.2;
+            text-shadow: 0 4px 10px rgba(0,0,0,0.5);
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #ccc;
+            margin-bottom: 30px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: #000;
+            padding: 12px 30px;
+            border-radius: 4px;
+            font-weight: 700;
+            font-size: 16px;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+
+        .cta-button:hover {
+            background-color: var(--primary-hover);
+            transform: translateY(-2px);
+        }
+
+        /* 分类与概览 */
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: end;
+            margin: 60px 0 30px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .section-title {
+            font-size: 28px;
+            font-weight: 700;
+            position: relative;
+            padding-left: 15px;
+        }
+
+        .section-title::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 5px;
+            height: 24px;
+            background-color: var(--primary-color);
+            border-radius: 2px;
+        }
+
+        .section-link {
+            color: var(--text-secondary);
+            font-size: 14px;
+        }
+
+        .section-link:hover {
+            color: var(--primary-color);
+        }
+
+        .grid-layout {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        /* 卡片样式 */
+        .card {
+            background-color: var(--bg-card);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            border-color: rgba(0, 255, 157, 0.3);
+        }
+
+        .card-image {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+        }
+
+        .card-body {
+            padding: 20px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-tag {
+            font-size: 12px;
+            color: var(--primary-color);
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .card-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            line-height: 1.4;
+        }
+
+        .card-desc {
+            font-size: 14px;
+            color: var(--text-secondary);
+            margin-bottom: 15px;
+            flex: 1;
+        }
+
+        .card-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 12px;
+            color: #666;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            padding-top: 15px;
+        }
+
+        .card-stats {
+            display: flex;
+            gap: 15px;
+        }
+
+        .card-stats span {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        /* 热门榜单 */
+        .rank-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .rank-item {
+            display: flex;
+            align-items: center;
+            background-color: var(--bg-card);
+            padding: 15px;
+            border-radius: 6px;
+            border-left: 4px solid transparent;
+            transition: background-color 0.2s;
+        }
+
+        .rank-item:hover {
+            background-color: rgba(255, 255, 255, 0.03);
+        }
+
+        .rank-number {
+            font-size: 24px;
+            font-weight: 800;
+            color: rgba(255, 255, 255, 0.1);
+            width: 40px;
+            text-align: center;
+            font-style: italic;
+        }
+
+        .rank-item:nth-child(1) .rank-number { color: var(--accent-red); }
+        .rank-item:nth-child(2) .rank-number { color: #ffb800; }
+        .rank-item:nth-child(3) .rank-number { color: #cd7f32; }
+
+        .rank-content {
+            flex: 1;
+            margin-left: 15px;
+        }
+
+        .rank-title {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .rank-info {
+            font-size: 12px;
+            color: var(--text-secondary);
+        }
+
+        /* 游戏特色/侧边栏 */
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .widget {
+            background-color: var(--bg-card);
+            padding: 25px;
+            border-radius: 8px;
+        }
+
+        .widget-title {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            border-left: 3px solid var(--accent-blue);
+            padding-left: 10px;
+        }
+
+        .game-feature-list li {
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .game-feature-list li:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+        }
+
+        .feature-icon {
+            width: 32px;
+            height: 32px;
+            background: rgba(77, 148, 255, 0.1);
+            color: var(--accent-blue);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            flex-shrink: 0;
+        }
+
+        .feature-text h4 {
+            font-size: 14px;
+            margin-bottom: 4px;
+        }
+
+        .feature-text p {
+            font-size: 12px;
+            color: var(--text-secondary);
+        }
+
+        /* 常见问题 */
+        .faq-section {
+            background-color: var(--bg-card);
+            padding: 50px 0;
+            margin-top: 60px;
+        }
+
+        .faq-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .faq-item h3 {
+            font-size: 16px;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+
+        .faq-item p {
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+
+        /* 页脚 */
+        footer {
+            background-color: #0a0a0c;
+            padding: 50px 0 20px;
+            margin-top: 80px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-brand p {
+            font-size: 14px;
+            color: var(--text-secondary);
+            margin-top: 15px;
+            max-width: 300px;
+        }
+
+        .footer-col h4 {
+            font-size: 16px;
+            margin-bottom: 20px;
+            color: var(--text-main);
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            font-size: 12px;
+            color: #555;
+        }
+
+        /* 响应式适配 */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 32px; }
+            .nav-container { flex-direction: column; gap: 15px; height: auto; padding: 15px 0; }
+            nav ul { gap: 15px; font-size: 14px; }
+            .search-bar { display: none; }
+            .grid-layout { grid-template-columns: 1fr; }
+            .sidebar { order: -1; }
+            .faq-grid { grid-template-columns: 1fr; }
+            .footer-content { grid-template-columns: 1fr; text-align: center; }
+            .footer-brand p { margin: 15px auto; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 导航栏 -->
+    <header>
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <span>寂寞哥</span>解说
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#">游戏资讯</a></li>
+                    <li><a href="#">英雄攻略</a></li>
+                    <li><a href="#">精彩集锦</a></li>
+                    <li><a href="#">排位技巧</a></li>
+                </ul>
+            </nav>
+            <div class="search-bar">
+                <input type="text" placeholder="搜索寂寞哥...">
+                <button>🔍</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- 首屏 Hero -->
+    <section class="hero">
+        <div class="container hero-content">
+            <h1>寂寞哥解说英雄联盟<br>带你领略峡谷风云</h1>
+            <p>专注英雄联盟深度解析，提供从入门到精通的实战攻略、版本更新解读以及高光时刻剪辑。关注寂寞哥，轻松上分，快乐游戏。</p>
+            <a href="#latest" class="cta-button">查看最新解说视频</a>
+        </div>
+    </section>
+
+    <main class="container">
+        
+        <!-- 热门推荐 -->
+        <section id="latest" class="section-header">
+            <h2 class="section-title">最新推荐</h2>
+            <a href="#" class="section-link">查看更多 ></a>
+        </section>
+
+        <div class="grid-layout">
+            <!-- 视频卡片 1 -->
+            <article class="card">
+                <img src="https://picsum.photos/seed/lol1/400/225" alt="寂寞哥解说视频封面" class="card-image">
+                <div class="card-body">
+                    <span class="card-tag">精彩集锦</span>
+                    <h3 class="card-title">寂寞哥：这波团战操作太秀了，逆风翻盘就看这一波</h3>
+                    <p class="card-desc">本期带来寂寞哥解说的高光时刻，详细分析团战切入时机与技能衔接，助你提升操作上限。</p>
+                    <div class="card-meta">
+                        <div class="card-stats">
+                            <span>👁️ 12.5万</span>
+                            <span>⏱️ 15:30</span>
+                        </div>
+                        <span>LOL</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 攻略卡片 2 -->
+            <article class="card">
+                <img src="https://picsum.photos/seed/lol2/400/225" alt="英雄攻略封面" class="card-image">
+                <div class="card-body">
+                    <span class="card-tag">英雄攻略</span>
+                    <h3 class="card-title">寂寞哥教学：如何玩好当前版本T0上单</h3>
+                    <p class="card-desc">针对当前版本强势上单的详细出装与符文推荐，掌握对线细节，压制对手发育。</p>
+                    <div class="card-meta">
+                        <div class="card-stats">
+                            <span>👁️ 8.2万</span>
+                            <span>⏱️ 22:15</span>
+                        </div>
+                        <span>上单</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 资讯卡片 3 -->
+            <article class="card">
+                <img src="https://picsum.photos/seed/lol3/400/225" alt="游戏资讯封面" class="card-image">
+                <div class="card-body">
+                    <span class="card-tag">版本资讯</span>
+                    <h3 class="card-title">10.23版本更新解读：寂寞哥带你预览新改动</h3>
+                    <p class="card-desc">新装备上线、英雄调整，寂寞哥第一时间为您解读版本环境变化及上分思路。</p>
+                    <div class="card-meta">
+                        <div class="card-stats">
+                            <span>👁️ 5.6万</span>
+                            <span>⏱️ 10:45</span>
+                        </div>
+                        <span>资讯</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 集锦卡片 4 -->
+            <article class="card">
+                <img src="https://picsum.photos/seed/lol4/400/225" alt="搞笑集锦封面" class="card-image">
+                <div class="card-body">
+                    <span class="card-tag">整活时刻</span>
+                    <h3 class="card-title">寂寞哥：这就是峡谷里的快乐源泉，笑死我了</h3>
+                    <p class="card-desc">收集全网最搞笑的游戏瞬间，配合寂寞哥独特的解说风格，带你放松心情。</p>
+                    <div class="card-meta">
+                        <div class="card-stats">
+                            <span>👁️ 20.1万</span>
+                            <span>⏱️ 08:20</span>
+                        </div>
+                        <span>搞笑</span>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+        <!-- 内容布局：文章列表与侧边栏 -->
+        <div style="display: flex; gap: 40px; margin-top: 80px; flex-wrap: wrap;">
+            
+            <!-- 左侧主要内容 -->
+            <div style="flex: 2; min-width: 300px;">
+                <section class="section-header">
+                    <h2 class="section-title">深度攻略</h2>
+                    <a href="#" class="section-link">更多文章 ></a>
+                </section>
+
+                <div class="grid-layout">
+                    <article class="card">
+                        <img src="https://picsum.photos/seed/lol5/400/225" alt="打野攻略" class="card-image">
+                        <div class="card-body">
+                            <span class="card-tag">打野教学</span>
+                            <h3 class="card-title">寂寞哥：打野节奏详解，如何带动全场</h3>
+                            <p class="card-desc">打野是游戏的核心，本篇详解如何控龙、反野以及如何在前期建立优势。</p>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <img src="https://picsum.photos/seed/lol6/400/225" alt="辅助攻略" class="card-image">
+                        <div class="card-body">
+                            <span class="card-tag">辅助进阶</span>
+                            <h3 class="card-title">寂寞哥：硬辅与软辅的区别与玩法</h3>
+                            <p class="card-desc">针对不同辅助英雄的出装思路与游走时机，提升团队保护能力。</p>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <img src="https://picsum.photos/seed/lol7/400/225" alt="团战技巧" class="card-image">
+                        <div class="card-body">
+                            <span class="card-tag">意识提升</span>
+                            <h3 class="card-title">寂寞哥：学会看小地图，不再送人头</h3>
+                            <p class="card-desc">通过小地图信息预判敌方动向，提升团战站位意识。</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <!-- 右侧侧边栏 -->
+            <aside class="sidebar" style="flex: 1; min-width: 280px;">
+                <!-- 热门榜单 -->
+                <div class="widget">
+                    <h3 class="widget-title">寂寞哥热门榜单</h3>
+                    <ul class="rank-list">
+                        <li class="rank-item">
+                            <span class="rank-number">1</span>
+                            <div class="rank-content">
+                                <div class="rank-title">2023年LPL夏季赛总决赛精彩回放</div>
+                                <div class="rank-info">解说视频 • 45.2万次播放</div>
+                            </div>
+                        </li>
+                        <li class="rank-item">
+                            <span class="rank-number">2</span>
+                            <div class="rank-content">
+                                <div class="rank-title">寂寞哥教你玩盲僧：从入门到宗师</div>
+                                <div class="rank-info">教学视频 • 32.1万次播放</div>
+                            </div>
+                        </li>
+                        <li class="rank-item">
+                            <span class="rank-number">3</span>
+                            <div class="rank-content">
+                                <div class="rank-title">路人王五杀集锦，寂寞哥全程解说</div>
+                                <div class="rank-info">精彩集锦 • 28.5万次播放</div>
+                            </div>
+                        </li>
+                        <li class="rank-item">
+                            <span class="rank-number">4</span>
+                            <div class="rank-content">
+                                <div class="rank-title">版本答案：当前版本强势英雄推荐</div>
+                                <div class="rank-info">攻略文章 • 15.3万次阅读</div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- 游戏特色介绍 -->
+                <div class="widget">
+                    <h3 class="widget-title">服务特色</h3>
+                    <ul class="game-feature-list">
+                        <li>
+                            <div class="feature-item">
+                                <div class="feature-icon">⚡</div>
+                                <div class="feature-text">
+                                    <h4>快速更新</h4>
+                                    <p>版本更新第一时间同步攻略</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="feature-item">
+                                <div class="feature-icon">🎯</div>
+                                <div class="feature-text">
+                                    <h4>精准定位</h4>
+                                    <p>针对不同段位提供进阶建议</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="feature-item">
+                                <div class="feature-icon">💬</div>
+                                <div class="feature-text">
+                                    <h4>互动社区</h4>
+                                    <p>与寂寞哥及其他玩家实时交流</p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+
+        <!-- 常见问题 FAQ -->
+        <section class="faq-section">
+            <div class="container">
+                <div class="section-header" style="margin-top:0;">
+                    <h2 class="section-title">常见问题</h2>
+                </div>
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <h3>寂寞哥的解说风格是怎样的？</h3>
+                        <p>寂寞哥以幽默风趣、激情澎湃的解说风格著称，擅长在关键时刻通过语言调动观众情绪，同时兼顾游戏机制的深度分析。</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>如何通过你的攻略上分？</h3>
+                        <p>我们提供从英雄选择、符文出装到对线细节的全方位攻略。建议先从版本强势英雄入手，熟练掌握后再尝试其他英雄。</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>视频资源是否免费？</h3>
+                        <p>本站提供的所有游戏解说视频及攻略文章均为免费资源，致力于为玩家提供高质量的内容服务。</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>支持哪些游戏平台？</h3>
+                        <p>目前主要专注于英雄联盟端游及云顶之弈的解说与攻略，未来会逐步扩展至其他热门电竞项目。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- 页脚 -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <span>寂寞哥</span>解说
+                    </a>
+                    <p>专注英雄联盟领域，为您提供最权威的游戏资讯、最实用的上分攻略以及最精彩的赛事解说。让我们一起在召唤师峡谷中战斗！</p>
+                </div>
+                <div class="footer-col">
+                    <h4>网站导航</h4>
+                    <ul>
+                        <li><a href="#">首页</a></li>
+                        <li><a href="#">最新视频</a></li>
+                        <li><a href="#">英雄攻略</a></li>
+                        <li><a href="#">装备出装</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>内容分类</h4>
+                    <ul>
+                        <li><a href="#">上单专区</a></li>
+                        <li><a href="#">打野专区</a></li>
+                        <li><a href="#">中单专区</a></li>
+                        <li><a href="#">辅助专区</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>联系我们</h4>
+                    <ul>
+                        <li><a href="#">合作洽谈</a></li>
+                        <li><a href="#">投稿建议</a></li>
+                        <li><a href="#">粉丝群</a></li>
+                        <li><a href="#">关于我们</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 寂寞哥解说英雄联盟 版权所有. 本站内容仅供学习交流，请勿用于商业用途。</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
