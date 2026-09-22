@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="步入式恒温恒湿房专业制造商，提供高精度环境测试室解决方案。涵盖精密仪器测试、材料老化试验、制药及食品检测等应用场景，定制化设计与一站式服务。">
+    <meta name="keywords" content="步入式恒温恒湿房,环境试验箱,高低温交变湿热试验室,老化房,计量检测设备">
+    <title>步入式恒温恒湿房-高精度环境测试解决方案与定制服务</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #0056b3;
+            --secondary-color: #00a8cc;
+            --accent-color: #ff9800;
+            --text-dark: #333333;
+            --text-gray: #666666;
+            --bg-light: #f9f9f9;
+            --bg-white: #ffffff;
+            --border-radius: 8px;
+            --container-width: 1200px;
+            --spacing-unit: 1rem;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--bg-white);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Utility Classes */
+        .container {
+            width: 100%;
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title h2 {
+            font-size: 2rem;
+            color: var(--text-dark);
+            margin-bottom: 0.5rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background-color: var(--secondary-color);
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+
+        .section-title p {
+            color: var(--text-gray);
+            font-size: 1rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            border-radius: 4px;
+            font-weight: 600;
+            cursor: pointer;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: none;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: #004494;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+            background: transparent;
+        }
+
+        .btn-outline:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--bg-white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+        }
+
+        .logo span {
+            color: var(--text-dark);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-weight: 500;
+            font-size: 1rem;
+        }
+
+        nav a:hover {
+            color: var(--secondary-color);
+        }
+
+        .header-cta {
+            display: none;
+        }
+
+        @media (min-width: 768px) {
+            .header-cta {
+                display: block;
+            }
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #f0f8ff 0%, #e6f7ff 100%);
+            padding: 80px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .hero-text {
+            flex: 1;
+            min-width: 300px;
+            padding-right: 40px;
+        }
+
+        .hero-text h1 {
+            font-size: 2.5rem;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            color: var(--text-dark);
+        }
+
+        .hero-text p {
+            font-size: 1.1rem;
+            color: var(--text-gray);
+            margin-bottom: 2rem;
+            max-width: 600px;
+        }
+
+        .hero-tags {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            background-color: rgba(0, 168, 204, 0.1);
+            color: var(--secondary-color);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        .hero-image {
+            flex: 1;
+            min-width: 300px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .hero-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: var(--border-radius);
+            box-shadow: 0 20px 40px rgba(0, 86, 179, 0.15);
+        }
+
+        /* Features Section */
+        .features {
+            padding: 80px 0;
+            background-color: var(--bg-white);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            padding: 30px;
+            background: var(--bg-light);
+            border-radius: var(--border-radius);
+            transition: transform 0.3s ease;
+            text-align: center;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .feature-card h3 {
+            margin-bottom: 15px;
+            font-size: 1.25rem;
+        }
+
+        .feature-card p {
+            color: var(--text-gray);
+            font-size: 0.95rem;
+        }
+
+        /* Application Scenarios */
+        .applications {
+            padding: 80px 0;
+            background-color: var(--bg-light);
+        }
+
+        .app-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .app-item {
+            background: var(--bg-white);
+            padding: 25px;
+            border-radius: var(--border-radius);
+            border-left: 4px solid var(--primary-color);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        }
+
+        .app-item h3 {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .app-item p {
+            font-size: 0.9rem;
+            color: var(--text-gray);
+        }
+
+        /* Specs Table */
+        .specs-section {
+            padding: 80px 0;
+        }
+
+        .specs-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--bg-white);
+            border: 1px solid #eee;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+        }
+
+        .specs-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .specs-table th, .specs-table td {
+            padding: 15px 20px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+
+        .specs-table th {
+            background-color: #f8f9fa;
+            width: 35%;
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        .specs-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            padding: 80px 0;
+            background-color: var(--bg-light);
+        }
+
+        .faq-item {
+            background: var(--bg-white);
+            margin-bottom: 15px;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+        }
+
+        .faq-question {
+            padding: 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            transition: transform 0.3s;
+        }
+
+        .faq-item.active .faq-question::after {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            padding: 0 20px;
+            color: var(--text-gray);
+        }
+
+        .faq-item.active .faq-answer {
+            padding-bottom: 20px;
+            max-height: 200px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1a1a1a;
+            color: #ccc;
+            padding: 60px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--secondary-color);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #333;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-wrapper {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 0;
+            }
+            
+            nav ul {
+                margin: 15px 0;
+                gap: 15px;
+                font-size: 0.9rem;
+            }
+
+            .hero-text h1 {
+                font-size: 2rem;
+            }
+
+            .hero-content {
+                flex-direction: column-reverse;
+                text-align: center;
+            }
+
+            .hero-text {
+                padding-right: 0;
+            }
+
+            .hero-tags {
+                justify-content: center;
+            }
+
+            .section-title h2 {
+                font-size: 1.75rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">
+                <span>环境科技</span>步入式恒温恒湿房
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#features">核心优势</a></li>
+                    <li><a href="#applications">应用场景</a></li>
+                    <li><a href="#specs">技术参数</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+            <div class="header-cta">
+                <a href="#contact" class="btn btn-primary">获取定制方案</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <h1>精准模拟环境，保障产品品质</h1>
+                    <div class="hero-tags">
+                        <span class="tag">温度控制精度 ±0.5℃</span>
+                        <span class="tag">湿度控制精度 ±3%RH</span>
+                        <span class="tag">智能互联监控</span>
+                    </div>
+                    <p>步入式恒温恒湿房专为大型零部件、整机设备、材料研发及质量检测设计。提供稳定、可控的测试环境，满足GB/T 5170、IEC 60068等国际标准要求。</p>
+                    <div style="display: flex; gap: 15px; flex-wrap: wrap;">
+                        <a href="#contact" class="btn btn-primary">咨询报价</a>
+                        <a href="#specs" class="btn btn-outline">查看参数</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <!-- Placeholder for a professional lab image -->
+                    <img src="https://picsum.photos/seed/lab_equipment/600/400" alt="步入式恒温恒湿房实验室内部实景" width="600" height="400">
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="features">
+            <div class="container">
+                <div class="section-title">
+                    <h2>核心技术与性能优势</h2>
+                    <p>采用先进控制算法与结构设计，确保长期运行的稳定性</p>
+                </div>
+                <div class="features-grid">
+                    <article class="feature-card">
+                        <span class="feature-icon">🌡️</span>
+                        <h3>宽温域控制</h3>
+                        <p>支持 -70℃ 至 +150℃ 温度范围，湿度范围 10%RH ~ 98%RH，覆盖绝大多数材料老化与高低温测试需求。</p>
+                    </article>
+                    <article class="feature-card">
+                        <span class="feature-icon">⚡</span>
+                        <h3>快速响应系统</h3>
+                        <p>配备大功率压缩机和快速风循环系统，升温降温速率可达 3-5℃/min，缩短测试周期，提高工作效率。</p>
+                    </article>
+                    <article class="feature-card">
+                        <span class="feature-icon">🛡️</span>
+                        <h3>防凝露技术</h3>
+                        <p>自动除湿与加热联控，在低温高湿环境下有效防止内壁结露，保护被测样品不受水汽侵蚀。</p>
+                    </article>
+                    <article class="feature-card">
+                        <span class="feature-icon">📊</span>
+                        <h3>智能数据记录</h3>
+                        <p>内置高精度传感器与数据采集系统，支持RS485/RS232接口，数据可导出、可追溯，符合质检规范。</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Applications Section -->
+        <section id="applications" class="applications">
+            <div class="container">
+                <div class="section-title">
+                    <h2>广泛应用领域</h2>
+                    <p>服务于航空航天、汽车制造、电子电工、生物制药等多个行业</p>
+                </div>
+                <div class="app-grid">
+                    <div class="app-item">
+                        <h3>🚀 航空航天</h3>
+                        <p>模拟高空环境，测试飞机零部件及电子元器件的耐候性。</p>
+                    </div>
+                    <div class="app-item">
+                        <h3>🚗 汽车工业</h3>
+                        <p>整车及零部件的耐高低温、冷热冲击及湿热老化试验。</p>
+                    </div>
+                    <div class="app-item">
+                        <h3>📱 电子通讯</h3>
+                        <p>手机、电脑等消费电子产品的环境可靠性测试。</p>
+                    </div>
+                    <div class="app-item">
+                        <h3>💊 制药食品</h3>
+                        <p>药品稳定性试验箱，食品包装材料的高湿环境测试。</p>
+                    </div>
+                    <div class="app-item">
+                        <h3>🔬 材料研发</h3>
+                        <p>高分子材料、涂层、粘合剂的耐候性与老化研究。</p>
+                    </div>
+                    <div class="app-item">
+                        <h3>🧪 计量检测</h3>
+                        <p>第三方检测机构的标准环境实验室建设。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Specs Section -->
+        <section id="specs" class="specs-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>典型技术参数</h2>
+                    <p>以下为标准配置参考，具体参数可根据需求定制</p>
+                </div>
+                <div class="specs-container">
+                    <table class="specs-table">
+                        <tbody>
+                            <tr>
+                                <th>工作室尺寸 (宽×高×深)</th>
+                                <td>3000×2500×2400 mm (可定制)</td>
+                            </tr>
+                            <tr>
+                                <th>温度范围</th>
+                                <td>-20℃ ~ +80℃ (或按需定制)</td>
+                            </tr>
+                            <tr>
+                                <th>湿度范围</th>
+                                <td>30%RH ~ 98%RH</td>
+                            </tr>
+                            <tr>
+                                <th>温度均匀度</th>
+                                <td>≤ ±2℃</td>
+                            </tr>
+                            <tr>
+                                <th>湿度均匀度</th>
+                                <td>≤ ±3%RH</td>
+                            </tr>
+                            <tr>
+                                <th>压缩机品牌</th>
+                                <td>法国泰康或比泽尔 (可选)</td>
+                            </tr>
+                            <tr>
+                                <th>保温材料</th>
+                                <td>硬质聚氨酯泡沫 + 50mm厚岩棉</td>
+                            </tr>
+                            <tr>
+                                <th>制冷方式</th>
+                                <td>单机压缩 / 复叠压缩</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="faq-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>常见问题解答</h2>
+                </div>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <div class="faq-question">步入式恒温恒湿房与小型试验箱有什么区别？</div>
+                        <div class="faq-answer">
+                            <p>步入式恒温恒湿房体积大（通常在几立方米到几百立方米），内部空间开阔，方便大型零部件或整机设备的放置和测试。而小型试验箱体积小，通常用于元器件或小部件的测试。步入式房更注重结构强度、保温性能和大型设备的运行稳定性。</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">如何确定我需要的尺寸和温度范围？</div>
+                        <div class="faq-answer">
+                            <p>建议您提供待测试产品的最大尺寸、重量以及具体的测试标准（如GB/T、IEC等）。我们的工程师会根据这些信息为您推荐合适的内箱尺寸、制冷制热功率以及配置方案，以确保测试均匀性和效率。</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">设备的安装环境有什么要求？</div>
+                        <div class="faq-answer">
+                            <p>设备应放置在远离热源、无阳光直射、通风良好的室内。地面需平整，周围需预留一定的维护检修空间（通常前后左右各1米以上），以确保散热和维修便利。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact CTA -->
+        <section id="contact" style="background: var(--primary-color); color: white; padding: 60px 0; text-align: center;">
+            <div class="container">
+                <h2 style="margin-bottom: 20px;">需要定制您的专属环境实验室？</h2>
+                <p style="margin-bottom: 30px; opacity: 0.9;">我们有专业的技术团队，为您提供从方案设计、生产制造到安装调试的一站式服务。</p>
+                <button class="btn" style="background: white; color: var(--primary-color);" onclick="alert('感谢您的兴趣！请填写下方留言或直接拨打客服电话进行咨询。')">联系在线客服</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>环境科技</h4>
+                    <p style="font-size: 0.9rem; line-height: 1.8;">专注于环境试验设备研发与制造，致力于为全球客户提供高精度、高可靠性的测试解决方案。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>产品中心</h4>
+                    <ul>
+                        <li><a href="#">步入式恒温恒湿房</a></li>
+                        <li><a href="#">高低温交变湿热试验箱</a></li>
+                        <li><a href="#">冷热冲击试验箱</a></li>
+                        <li><a href="#">老化房/老化室</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="#">关于我们</a></li>
+                        <li><a href="#">案例展示</a></li>
+                        <li><a href="#">技术支持</a></li>
+                        <li><a href="#">联系我们</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>联系方式</h4>
+                    <ul>
+                        <li>电话：400-123-4567</li>
+                        <li>邮箱：support@example.com</li>
+                        <li>地址：某某市高新技术产业园区A栋</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 环境科技有限公司 版权所有 | 备案号：ICP备XXXXXXXX号</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple FAQ Accordion Logic
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    // Close other items
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    // Toggle current item
+                    item.classList.toggle('active');
+                });
+            });
+
+            // Smooth scroll for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+                          </html>
