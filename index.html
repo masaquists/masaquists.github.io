@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="华为云WeLink Kai官网，提供企业级即时通讯、在线会议、智慧协作文档及安全办公平台。助力企业数字化转型，提升远程办公效率与协同能力。">
+    <meta name="keywords" content="华为云welinkai,华为云WeLink Kai,企业即时通讯,在线会议,协同办公,华为云">
+    <title>华为云welinkai-企业级协同办公与智慧服务平台</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #C8102E; /* 华为红 */
+            --primary-hover: #A00C25;
+            --text-main: #1f1f1f;
+            --text-secondary: #666666;
+            --bg-body: #f5f7fa;
+            --bg-white: #ffffff;
+            --border-color: #e0e0e0;
+            --shadow-card: 0 4px 12px rgba(0, 0, 0, 0.08);
+            --shadow-hover: 0 8px 24px rgba(0, 0, 0, 0.12);
+            --radius-md: 8px;
+            --radius-lg: 12px;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+            color: var(--text-main);
+            background-color: var(--bg-body);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* 布局容器 */
+        .container {
+            width: 100%;
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* 顶部导航 */
+        .site-header {
+            background-color: var(--bg-white);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--text-main);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            font-size: 16px;
+            font-weight: 500;
+            color: var(--text-main);
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--primary-color);
+        }
+
+        .nav-cta {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 10px 24px;
+            border-radius: var(--radius-md);
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+
+        .nav-cta:hover {
+            background-color: var(--primary-hover);
+        }
+
+        /* Hero 区域 */
+        .hero {
+            background: linear-gradient(135deg, #fff0f1 0%, #ffffff 100%);
+            padding: 80px 0 100px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .hero-text h1 {
+            font-size: 48px;
+            line-height: 1.2;
+            margin-bottom: 24px;
+            color: #000;
+        }
+
+        .hero-text h1 .highlight {
+            color: var(--primary-color);
+            position: relative;
+        }
+
+        .hero-text p {
+            font-size: 18px;
+            color: var(--text-secondary);
+            margin-bottom: 32px;
+            max-width: 500px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 32px;
+            border-radius: var(--radius-md);
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+            border: 1px solid var(--primary-color);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(200, 16, 46, 0.3);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: var(--primary-color);
+            border: 1px solid var(--primary-color);
+        }
+
+        .btn-outline:hover {
+            background-color: rgba(200, 16, 46, 0.05);
+        }
+
+        .hero-visual {
+            position: relative;
+        }
+
+        .hero-visual img {
+            width: 100%;
+            border-radius: var(--radius-lg);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+
+        /* 核心功能 Grid */
+        .section {
+            padding: 80px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-header h2 {
+            font-size: 36px;
+            margin-bottom: 16px;
+        }
+
+        .section-header p {
+            color: var(--text-secondary);
+            font-size: 18px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+        }
+
+        .feature-card {
+            background: var(--bg-white);
+            padding: 40px 30px;
+            border-radius: var(--radius-lg);
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+            border-color: rgba(200, 16, 46, 0.1);
+        }
+
+        .feature-icon {
+            width: 64px;
+            height: 64px;
+            background-color: #fff0f1;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+            color: var(--primary-color);
+            font-size: 28px;
+        }
+
+        .feature-card h3 {
+            font-size: 20px;
+            margin-bottom: 12px;
+        }
+
+        .feature-card p {
+            color: var(--text-secondary);
+            font-size: 14px;
+        }
+
+        /* 应用场景 */
+        .use-cases {
+            background-color: var(--bg-white);
+        }
+
+        .use-cases-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+        }
+
+        .case-card {
+            position: relative;
+            overflow: hidden;
+            border-radius: var(--radius-lg);
+            height: 280px;
+            group: cursor;
+        }
+
+        .case-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .case-card:hover img {
+            transform: scale(1.05);
+        }
+
+        .case-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            padding: 30px;
+            color: white;
+        }
+
+        .case-overlay h3 {
+            font-size: 22px;
+            margin-bottom: 8px;
+        }
+
+        .case-overlay p {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        /* 技术架构 */
+        .tech-section {
+            background-color: #f8f9fa;
+        }
+
+        .tech-container {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        .tech-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 30px;
+            background: white;
+            padding: 30px;
+            border-radius: var(--radius-lg);
+        }
+
+        .tech-number {
+            font-size: 48px;
+            font-weight: 800;
+            color: rgba(200, 16, 46, 0.1);
+            line-height: 1;
+        }
+
+        .tech-content h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .tech-content p {
+            color: var(--text-secondary);
+        }
+
+        /* FAQ */
+        .faq-section {
+            background-color: var(--bg-white);
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid var(--border-color);
+            padding: 24px 0;
+        }
+
+        .faq-question {
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-answer {
+            margin-top: 16px;
+            color: var(--text-secondary);
+            display: none;
+            padding-left: 10px;
+            border-left: 3px solid var(--primary-color);
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item.active .faq-question {
+            color: var(--primary-color);
+        }
+
+        /* 页脚 */
+        .site-footer {
+            background-color: #1a1a1a;
+            color: #999;
+            padding: 60px 0 30px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-brand h4 {
+            color: white;
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        .footer-brand p {
+            font-size: 14px;
+            max-width: 300px;
+            line-height: 1.8;
+        }
+
+        .footer-col h5 {
+            color: white;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-col ul li a {
+            font-size: 14px;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #333;
+            padding-top: 30px;
+            text-align: center;
+            font-size: 13px;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 1024px) {
+            .features-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .use-cases-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none; /* 简化处理，移动端隐藏菜单 */
+            }
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 40px;
+            }
+            .hero-text h1 {
+                font-size: 36px;
+            }
+            .hero-text p {
+                margin: 0 auto 32px;
+            }
+            .hero-buttons {
+                justify-content: center;
+            }
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+            .use-cases-grid {
+                grid-template-columns: 1fr;
+            }
+            .tech-item {
+                flex-direction: column;
+                text-align: center;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            .footer-brand p {
+                margin: 0 auto;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 顶部导航 -->
+    <header class="site-header">
+        <div class="container nav-inner">
+            <a href="#" class="logo">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="#C8102E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M2 17L12 22L22 17" stroke="#C8102E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M2 12L12 17L22 12" stroke="#C8102E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span>华为云WeLink Kai</span>
+            </a>
+            <nav class="nav-links">
+                <a href="#" class="active">首页</a>
+                <a href="#features">核心功能</a>
+                <a href="#solutions">解决方案</a>
+                <a href="#developer">开发者</a>
+                <a href="#help">帮助中心</a>
+            </nav>
+            <a href="#" class="nav-cta">立即免费试用</a>
+        </div>
+    </header>
+
+    <!-- Hero 首屏 -->
+    <section class="hero">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1>华为云 <span class="highlight">WeLink Kai</span> <br>让办公更智慧</h1>
+                <p>基于华为云强大的AI与大数据能力，提供一站式企业协同办公解决方案。连接人与信息，打破时空限制，助力企业实现数字化、智能化转型。</p>
+                <div class="hero-buttons">
+                    <a href="#" class="btn btn-primary">免费注册账号</a>
+                    <a href="#" class="btn btn-outline">查看产品文档</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <img src="https://picsum.photos/seed/huaweiweblink/600/400.jpg" alt="华为云WeLink Kai 平台界面展示">
+            </div>
+        </div>
+    </section>
+
+    <!-- 核心功能 -->
+    <section id="features" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>全方位企业协同能力</h2>
+                <p>集成IM通讯、视频会议、智能文档等核心应用，满足企业多元化办公需求</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">💬</div>
+                    <h3>即时通讯</h3>
+                    <p>支持单聊、群聊、文件传输，消息已读回执，保障沟通高效顺畅。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📹</div>
+                    <h3>高清视频会议</h3>
+                    <p>支持百人并发会议，具备美颜降噪、屏幕共享、白板协作功能。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📝</div>
+                    <h3>智慧协作文档</h3>
+                    <p>在线编辑文档、表格、PPT，多人实时协同，版本历史自动保存。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔒</div>
+                    <h3>安全合规</h3>
+                    <p>基于华为云多级安全防护，数据加密传输存储，符合国家等保标准。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 应用场景 -->
+    <section id="solutions" class="section use-cases">
+        <div class="container">
+            <div class="section-header">
+                <h2>多场景赋能</h2>
+                <p>适配不同规模企业的业务场景，灵活部署，即开即用</p>
+            </div>
+            <div class="use-cases-grid">
+                <div class="case-card">
+                    <img src="https://picsum.photos/seed/office1/400/300.jpg" alt="远程办公场景">
+                    <div class="case-overlay">
+                        <h3>远程办公</h3>
+                        <p>随时随地接入工作流，移动端无缝切换，确保业务不中断</p>
+                    </div>
+                </div>
+                <div class="case-card">
+                    <img src="https://picsum.photos/seed/meeting2/400/300.jpg" alt="跨地域会议">
+                    <div class="case-overlay">
+                        <h3>跨地域协作</h3>
+                        <p>连接全球分支机构，高清音视频会议降低沟通成本</p>
+                    </div>
+                </div>
+                <div class="case-card">
+                    <img src="https://picsum.photos/seed/data3/400/300.jpg" alt="数据管理">
+                    <div class="case-overlay">
+                        <h3>企业知识库</h3>
+                        <p>沉淀企业文档资产，统一管理权限，提升组织知识复用率</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 技术架构 -->
+    <section class="section tech-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>华为云技术驱动</h2>
+                <p>依托华为云底层基础设施，提供稳定可靠的云原生服务体验</p>
+            </div>
+            <div class="tech-container">
+                <div class="tech-item">
+                    <div class="tech-number">01</div>
+                    <div class="tech-content">
+                        <h3>分布式云架构</h3>
+                        <p>采用华为分布式云架构，实现算力就近接入，保障业务低时延、高可用运行。</p>
+                    </div>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-number">02</div>
+                    <div class="tech-content">
+                        <h3>AI 智能分析</h3>
+                        <p>内置智能语音识别与图像识别算法，为会议纪要自动生成、智能客服等场景提供支持。</p>
+                    </div>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-number">03</div>
+                    <div class="tech-content">
+                        <h3>万物互联集成</h3>
+                        <p>深度集成华为IoT能力，支持企业内部设备统一管控，打造数字化智能办公空间。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 常见问题 -->
+    <section id="help" class="section faq-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>常见问题解答</h2>
+            </div>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">华为云WeLink Kai与WeLink有什么区别？</div>
+                    <div class="faq-answer">华为云WeLink Kai是面向企业开发者及合作伙伴的开放平台版本，提供更灵活的API接口和SDK，支持私有化部署和深度定制，而WeLink是面向最终用户的企业协作套件。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">如何保障企业数据的安全？</div>
+                    <div class="faq-answer">平台采用端到端加密技术，数据存储于华为云专属可用区，并具备完善的权限管理体系，确保数据仅对企业内部授权人员可见。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">支持私有化部署吗？</div>
+                    <div class="faq-answer">支持。华为云WeLink Kai提供多种部署方式，包括公有云、混合云及本地化部署，满足金融、政府等对数据主权有特殊要求的行业需求。</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h4>华为云WeLink Kai</h4>
+                    <p>致力于为企业提供安全、智能、高效的一站式协同办公服务，连接世界，驱动未来。</p>
+                </div>
+                <div class="footer-col">
+                    <h5>产品服务</h5>
+                    <ul>
+                        <li><a href="#">即时通讯</a></li>
+                        <li><a href="#">视频会议</a></li>
+                        <li><a href="#">智能文档</a></li>
+                        <li><a href="#">移动办公</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h5>解决方案</h5>
+                    <ul>
+                        <li><a href="#">远程协作</a></li>
+                        <li><a href="#">智慧教育</a></li>
+                        <li><a href="#">政务办公</a></li>
+                        <li><a href="#">零售行业</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h5>支持与联系</h5>
+                    <ul>
+                        <li><a href="#">帮助中心</a></li>
+                        <li><a href="#">API文档</a></li>
+                        <li><a href="#">联系我们</a></li>
+                        <li><a href="#">隐私政策</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 华为云计算技术有限公司 版权所有 | 京ICP备00000000号</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 简单的FAQ折叠交互逻辑
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    // 关闭其他已打开的项
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    // 切换当前项
+                    item.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</body>
+      </html>
