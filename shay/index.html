@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ShayLaren 官方首页 - 提供高品质的视觉艺术展示、摄影作品分享以及创作者社区互动平台。探索最新作品，发现艺术灵感。">
+    <meta name="keywords" content="ShayLaren, 视觉艺术, 创作者社区, 摄影作品, 艺术展示">
+    <title>ShayLaren-视觉艺术与创作者展示平台</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --bg-color: #0f0f11;
+            --card-bg: #1a1a1d;
+            --text-main: #ffffff;
+            --text-muted: #a1a1aa;
+            --accent: #d4af37;
+            --accent-hover: #f9d868;
+            --spacing-sm: 8px;
+            --spacing-md: 16px;
+            --spacing-lg: 32px;
+            --spacing-xl: 64px;
+            --radius: 8px;
+            --font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-stack);
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Layout Utilities */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-md);
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: var(--spacing-lg);
+            border-left: 4px solid var(--accent);
+            padding-left: var(--spacing-md);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .section-title a {
+            font-size: 0.875rem;
+            color: var(--text-muted);
+            font-weight: 400;
+        }
+
+        .section-title a:hover {
+            color: var(--accent);
+        }
+
+        /* Header */
+        header {
+            background-color: rgba(15, 15, 17, 0.95);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--accent);
+        }
+
+        nav ul {
+            display: flex;
+            gap: var(--spacing-lg);
+        }
+
+        nav a {
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--text-muted);
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--text-main);
+        }
+
+        .header-actions {
+            display: flex;
+            gap: var(--spacing-md);
+        }
+
+        .btn {
+            padding: 8px 20px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: inline-block;
+            border: none;
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 1px solid var(--text-muted);
+            color: var(--text-main);
+        }
+
+        .btn-outline:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+
+        .btn-primary {
+            background-color: var(--accent);
+            color: #000;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--accent-hover);
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
+            background: linear-gradient(to bottom, rgba(15,15,17,0.3), var(--bg-color)), 
+                        url('https://picsum.photos/seed/art_hero/1920/1080') center/cover no-repeat;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 700px;
+            padding: var(--spacing-lg);
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: var(--spacing-md);
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.125rem;
+            color: var(--text-muted);
+            margin-bottom: var(--spacing-lg);
+        }
+
+        /* Gallery Grid */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: var(--spacing-lg);
+            margin-top: var(--spacing-xl);
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border-radius: var(--radius);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            border-color: rgba(212, 175, 55, 0.3);
+        }
+
+        .card-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            background-color: #2a2a2e;
+        }
+
+        .card-body {
+            padding: var(--spacing-md);
+        }
+
+        .card-tag {
+            font-size: 0.75rem;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: var(--spacing-sm);
+            display: block;
+        }
+
+        .card-title {
+            font-size: 1.1rem;
+            margin-bottom: var(--spacing-sm);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .card-meta {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-top: var(--spacing-md);
+        }
+
+        /* About Section */
+        .about-section {
+            padding: var(--spacing-xl) 0;
+            background-color: #161618;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--spacing-xl);
+            align-items: center;
+        }
+
+        .about-text h2 {
+            font-size: 2rem;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .about-text p {
+            color: var(--text-muted);
+            margin-bottom: var(--spacing-md);
+        }
+
+        .stats {
+            display: flex;
+            gap: var(--spacing-xl);
+            margin-top: var(--spacing-lg);
+        }
+
+        .stat-item h3 {
+            font-size: 2rem;
+            color: var(--accent);
+        }
+
+        .stat-item p {
+            font-size: 0.9rem;
+            margin-bottom: 0;
+        }
+
+        .about-image {
+            width: 100%;
+            border-radius: var(--radius);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+        }
+
+        /* Features */
+        .features {
+            padding: var(--spacing-xl) 0;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--spacing-lg);
+        }
+
+        .feature-item {
+            text-align: center;
+            padding: var(--spacing-lg);
+            border: 1px solid rgba(255,255,255,0.05);
+            border-radius: var(--radius);
+        }
+
+        .feature-icon {
+            font-size: 2rem;
+            margin-bottom: var(--spacing-md);
+            color: var(--accent);
+        }
+
+        .feature-item h3 {
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .feature-item p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #0a0a0c;
+            padding: var(--spacing-xl) 0 var(--spacing-lg);
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            margin-top: var(--spacing-xl);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: var(--spacing-xl);
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .footer-brand p {
+            color: var(--text-muted);
+            margin-top: var(--spacing-md);
+            font-size: 0.9rem;
+            max-width: 300px;
+        }
+
+        .footer-col h4 {
+            margin-bottom: var(--spacing-md);
+            font-size: 1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .footer-col ul li a {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--accent);
+        }
+
+        .copyright {
+            text-align: center;
+            color: #555;
+            font-size: 0.85rem;
+            padding-top: var(--spacing-lg);
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .nav-wrapper {
+                flex-direction: column;
+                height: auto;
+                padding: var(--spacing-md) 0;
+                gap: var(--spacing-md);
+            }
+
+            nav ul {
+                gap: var(--spacing-md);
+                font-size: 0.9rem;
+            }
+
+            .header-actions {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: var(--spacing-lg);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--accent)"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+                ShayLaren
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#">作品集</a></li>
+                    <li><a href="#">艺术社区</a></li>
+                    <li><a href="#">关于我们</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button class="btn btn-outline">登录</button>
+                <button class="btn btn-primary">加入社区</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>探索无限创意边界</h1>
+                <p>ShayLaren 是一个汇聚全球优秀视觉艺术家的平台，致力于展示摄影、插画与数字艺术，为创作者提供展示与交流的舞台。</p>
+                <div style="display: flex; gap: 15px; justify-content: center;">
+                    <button class="btn btn-primary">浏览作品</button>
+                    <button class="btn btn-outline">成为创作者</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Works -->
+        <section class="container">
+            <div class="section-title">
+                <span>精选作品</span>
+                <a href="#">查看全部 &rarr;</a>
+            </div>
+            <div class="gallery-grid">
+                <!-- Card 1 -->
+                <article class="card">
+                    <img src="https://picsum.photos/seed/art1/400/300" alt="抽象光影艺术作品" class="card-image">
+                    <div class="card-body">
+                        <span class="card-tag">摄影</span>
+                        <h3 class="card-title">城市黄昏的几何学</h3>
+                        <p style="font-size: 0.9rem; color: #888; margin-bottom: 10px;">通过独特的构图捕捉现代都市的节奏感。</p>
+                        <div class="card-meta">
+                            <span>作者: Alex Chen</span>
+                            <span>2小时前</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 2 -->
+                <article class="card">
+                    <img src="https://picsum.photos/seed/art2/400/300" alt="数字油画作品" class="card-image">
+                    <div class="card-body">
+                        <span class="card-tag">数字绘画</span>
+                        <h3 class="card-title">赛博朋克幻想</h3>
+                        <p style="font-size: 0.9rem; color: #888; margin-bottom: 10px;">探索未来科技与人文情感的交织。</p>
+                        <div class="card-meta">
+                            <span>作者: Sarah Wu</span>
+                            <span>5小时前</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 3 -->
+                <article class="card">
+                    <img src="https://picsum.photos/seed/art3/400/300" alt="黑白人像摄影" class="card-image">
+                    <div class="card-body">
+                        <span class="card-tag">人像摄影</span>
+                        <h3 class="card-title">静谧时刻</h3>
+                        <p style="font-size: 0.9rem; color: #888; margin-bottom: 10px;">纯粹的光影与情绪的表达。</p>
+                        <div class="card-meta">
+                            <span>作者: Mike Ross</span>
+                            <span>1天前</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 4 -->
+                <article class="card">
+                    <img src="https://picsum.photos/seed/art4/400/300" alt="概念设计草图" class="card-image">
+                    <div class="card-body">
+                        <span class="card-tag">概念设计</span>
+                        <h3 class="card-title">星际战舰设计</h3>
+                        <p style="font-size: 0.9rem; color: #888; margin-bottom: 10px;">为科幻电影概念图集成的详细方案。</p>
+                        <div class="card-meta">
+                            <span>作者: David Lee</span>
+                            <span>2天前</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about-section">
+            <div class="container about-grid">
+                <div class="about-text">
+                    <h2>为什么选择 ShayLaren？</h2>
+                    <p>我们不仅仅是一个展示平台，更是一个激发灵感的生态系统。无论你是专业艺术家还是业余爱好者，ShayLaren 都为你提供最纯粹的创作空间。</p>
+                    <p>在这里，每一张作品都有它的故事，每一次点赞都是对创作者的鼓励。我们通过严格的内容审核机制，确保展示的作品质量与原创性。</p>
+                    <div class="stats">
+                        <div class="stat-item">
+                            <h3>10k+</h3>
+                            <p>注册艺术家</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>500k+</h3>
+                            <p>高质量作品</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>100%</h3>
+                            <p>原创保证</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image-wrapper">
+                    <img src="https://picsum.photos/seed/studio/600/400" alt="ShayLaren 创作工作室概念图" class="about-image">
+                </div>
+            </div>
+        </section>
+
+        <!-- Features -->
+        <section class="container features">
+            <div class="section-title">
+                <span>平台特色</span>
+            </div>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">✨</div>
+                    <h3>高清无损展示</h3>
+                    <p>专为艺术细节打造的高分辨率浏览体验，支持视网膜屏幕。</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🛡️</div>
+                    <h3>版权保护机制</h3>
+                    <p>区块链技术辅助的数字水印与版权登记服务。</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🎨</div>
+                    <h3>社区互动</h3>
+                    <p>实时的评论、点赞与收藏功能，让艺术交流更紧密。</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">📱</div>
+                    <h3>多端同步</h3>
+                    <p>随时随地通过移动端或桌面端访问您的创作空间。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--accent)"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+                        ShayLaren
+                    </a>
+                    <p>连接创作者与观众的视觉桥梁，让每一份灵感都被看见。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>探索</h4>
+                    <ul>
+                        <li><a href="#">热门趋势</a></li>
+                        <li><a href="#">最新发布</a></li>
+                        <li><a href="#">编辑精选</a></li>
+                        <li><a href="#">活动日历</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>创作者</h4>
+                    <ul>
+                        <li><a href="#">上传作品</a></li>
+                        <li><a href="#">创作者指南</a></li>
+                        <li><a href="#">收益分成</a></li>
+                        <li><a href="#">API 接口</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>关于</h4>
+                    <ul>
+                        <li><a href="#">关于我们</a></li>
+                        <li><a href="#">联系方式</a></li>
+                        <li><a href="#">隐私政策</a></li>
+                        <li><a href="#">服务条款</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2023 ShayLaren Visual Arts Platform. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
