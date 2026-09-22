@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="阿尔卡冯的宝库 - 欢迎来到这个充满神秘与魔法的世界。这里汇集了各类奇幻小说、魔法道具图鉴、地下城探险指南以及稀有魔药配方，为所有渴望探索未知的冒险者提供最全面的资源与情报。">
+    <meta name="keywords" content="阿尔卡冯的宝库,奇幻小说,魔法道具,地下城探险,魔药配方,奇幻文学">
+    <title>阿尔卡冯的宝库 - 奇幻冒险资源与情报中心</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #d35400;
+            --text-color: #333;
+            --bg-color: #f4f1ea;
+            --card-bg: #ffffff;
+            --border-radius: 8px;
+            --spacing-unit: 16px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            background-image: radial-gradient(#dcdcdc 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            color: #ecf0f1;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            color: var(--accent-color);
+        }
+
+        .search-box {
+            display: flex;
+            gap: 5px;
+        }
+
+        .search-box input {
+            padding: 8px;
+            border-radius: 4px;
+            border: none;
+            width: 200px;
+        }
+
+        .search-box button {
+            padding: 8px 15px;
+            background-color: var(--accent-color);
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #2c3e50 0%, #4ca1af 100%);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            opacity: 0.3;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto 30px;
+            position: relative;
+            z-index: 1;
+            opacity: 0.9;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: var(--accent-color);
+            color: white;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            position: relative;
+            z-index: 1;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+
+        .cta-button:hover {
+            background-color: #e67e22;
+            transform: translateY(-2px);
+        }
+
+        /* Main Content Layout */
+        .main-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        /* Section Styles */
+        section {
+            margin-bottom: 40px;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 10px;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -12px;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background-color: var(--accent-color);
+        }
+
+        /* Card Grid */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+        }
+
+        .card-img {
+            height: 140px;
+            background-color: #eee;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-size: 3rem;
+            position: relative;
+        }
+        
+        .card-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .card-body {
+            padding: 15px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-title {
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        .card-desc {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 15px;
+            flex: 1;
+        }
+
+        .card-meta {
+            font-size: 0.8rem;
+            color: #888;
+            margin-top: auto;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .tag {
+            background-color: #f0f0f0;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+        }
+
+        /* Sidebar Styles */
+        .sidebar-widget {
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: var(--border-radius);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+        }
+
+        .widget-title {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            padding-left: 10px;
+            border-left: 4px solid var(--accent-color);
+        }
+
+        .list-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .list-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .list-icon {
+            color: var(--accent-color);
+            margin-top: 4px;
+        }
+
+        .list-content h4 {
+            font-size: 1rem;
+            margin-bottom: 4px;
+        }
+
+        .list-content p {
+            font-size: 0.85rem;
+            color: #666;
+        }
+
+        /* Atlas Table */
+        .atlas-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.95rem;
+        }
+
+        .atlas-table th, .atlas-table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+
+        .atlas-table th {
+            background-color: #f8f9fa;
+            color: var(--primary-color);
+        }
+
+        .rarity-legendary { color: #d35400; font-weight: bold; }
+        .rarity-epic { color: #8e44ad; font-weight: bold; }
+        .rarity-rare { color: #2980b9; font-weight: bold; }
+
+        /* FAQ Section */
+        .faq-item {
+            background: var(--card-bg);
+            margin-bottom: 15px;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 15px 20px;
+            background-color: #fafafa;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: bold;
+        }
+
+        .faq-question:hover {
+            background-color: #f0f0f0;
+        }
+
+        .faq-answer {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+            color: #555;
+        }
+
+        .faq-item.active .faq-answer {
+            padding: 15px 20px;
+            max-height: 200px;
+            border-top: 1px solid #eee;
+        }
+
+        .faq-icon {
+            transition: transform 0.3s;
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: #bdc3c7;
+            padding: 40px 0 20px;
+            margin-top: 60px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--accent-color);
+        }
+
+        .copyright {
+            text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 20px;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .main-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .header-content {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .search-box {
+                width: 100%;
+            }
+
+            .search-box input {
+                flex: 1;
+            }
+
+            nav ul {
+                gap: 10px;
+                font-size: 0.9rem;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <span>✦</span> 阿尔卡冯的宝库
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#">秘典</a></li>
+                    <li><a href="#">图鉴</a></li>
+                    <li><a href="#">冒险指南</a></li>
+                    <li><a href="#">关于</a></li>
+                </ul>
+            </nav>
+            <div class="search-box">
+                <input type="text" placeholder="搜索咒语、物品或地点...">
+                <button>搜寻</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1>探索无尽的魔法世界</h1>
+            <p>这里是所有追求知识、魔法与奇迹的冒险者的避风港。我们收藏了失落的魔法书、稀有的炼金材料以及古老地下城的详细地图。</p>
+            <a href="#latest" class="cta-button">开始探索</a>
+        </section>
+
+        <div class="main-grid">
+            <!-- Left Content -->
+            <div class="content-area">
+                
+                <!-- Latest Updates -->
+                <section id="latest">
+                    <div class="section-header">
+                        <h2 class="section-title">最新更新</h2>
+                        <a href="#" style="font-size: 0.9rem; color: var(--accent-color);">查看全部 &rarr;</a>
+                    </div>
+                    <div class="card-grid">
+                        <!-- Card 1 -->
+                        <article class="card">
+                            <div class="card-img">
+                                <img src="https://picsum.photos/seed/magic1/300/200" alt="古老的卷轴">
+                            </div>
+                            <div class="card-body">
+                                <span class="tag">魔法书</span>
+                                <h3 class="card-title">失落的预言书残页</h3>
+                                <p class="card-desc">在废弃的图书馆地下室发现的一本破旧书籍，似乎记载着关于古代精灵王的预言。</p>
+                                <div class="card-meta">
+                                    <span>作者: 艾瑞克·晨星</span>
+                                    <span>2小时前</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Card 2 -->
+                        <article class="card">
+                            <div class="card-img">
+                                <img src="https://picsum.photos/seed/potion/300/200" alt="魔药">
+                            </div>
+                            <div class="card-body">
+                                <span class="tag">配方</span>
+                                <h3 class="card-title">生命之水炼制指南</h3>
+                                <p class="card-desc">详细的步骤说明，包括所需的水晶粉末、月光草以及禁忌的施法仪式。</p>
+                                <div class="card-meta">
+                                    <span>分类: 炼金术</span>
+                                    <span>5小时前</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Card 3 -->
+                        <article class="card">
+                            <div class="card-img">
+                                <img src="https://picsum.photos/seed/weapon/300/200" alt="武器">
+                            </div>
+                            <div class="card-body">
+                                <span class="tag">图鉴</span>
+                                <h3 class="card-title">寒冰巨龙的鳞片</h3>
+                                <p class="card-desc">这种鳞片具有极强的防御力，是制作顶级护甲的理想材料，但采集极其危险。</p>
+                                <div class="card-meta">
+                                    <span>分类: 材质</span>
+                                    <span>1天前</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Card 4 -->
+                        <article class="card">
+                            <div class="card-img">
+                                <img src="https://picsum.photos/seed/dungeon/300/200" alt="地下城">
+                            </div>
+                            <div class="card-body">
+                                <span class="tag">地图</span>
+                                <h3 class="card-title">幽暗森林深处探秘</h3>
+                                <p class="card-desc">一份标记了隐藏洞穴入口和水源分布的详细手绘地图。</p>
+                                <div class="card-meta">
+                                    <span>分类: 地理</span>
+                                    <span>2天前</span>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <!-- Featured Atlas -->
+                <section>
+                    <div class="section-header">
+                        <h2 class="section-title">稀有物品图鉴</h2>
+                    </div>
+                    <div style="overflow-x: auto;">
+                        <table class="atlas-table">
+                            <thead>
+                                <tr>
+                                    <th>物品名称</th>
+                                    <th>稀有度</th>
+                                    <th>主要功能</th>
+                                    <th>来源</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>龙语宝石</td>
+                                    <td class="rarity-legendary">传说</td>
+                                    <td>能听懂所有龙族语言</td>
+                                    <td>巨龙巢穴</td>
+                                </tr>
+                                <tr>
+                                    <td>暗影斗篷</td>
+                                    <td class="rarity-epic">史诗</td>
+                                    <td>隐身能力，可抵挡一次致命攻击</td>
+                                    <td>黑市商人</td>
+                                </tr>
+                                <tr>
+                                    <td>精灵之泪</td>
+                                    <td class="rarity-rare">稀有</td>
+                                    <td>治愈所有精神类诅咒</td>
+                                    <td>精灵森林</td>
+                                </tr>
+                                <tr>
+                                    <td>矮人火把</td>
+                                    <td class="rarity-rare">稀有</td>
+                                    <td>永不熄灭，照亮黑暗</td>
+                                    <td>矮人矿山</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Right Sidebar -->
+            <aside class="sidebar">
+                <!-- Intro Widget -->
+                <div class="sidebar-widget">
+                    <h3 class="widget-title">关于宝库</h3>
+                    <p style="font-size: 0.9rem; color: #666;">欢迎来到阿尔卡冯的宝库。这里不仅是知识的海洋，更是冒险者交流心得的圣地。请遵守宝库守则，尊重每一位知识贡献者。</p>
+                </div>
+
+                <!-- Top Users -->
+                <div class="sidebar-widget">
+                    <h3 class="widget-title">知识贡献者</h3>
+                    <div class="list-item">
+                        <div class="list-icon">★</div>
+                        <div class="list-content">
+                            <h4>炼金术士莫德雷德</h4>
+                            <p>贡献了 128 份配方</p>
+                        </div>
+                    </div>
+                    <div class="list-item">
+                        <div class="list-icon">★</div>
+                        <div class="list-content">
+                            <h4>史莱姆研究员</h4>
+                            <p>贡献了 85 种生物图鉴</p>
+                        </div>
+                    </div>
+                    <div class="list-item">
+                        <div class="list-icon">★</div>
+                        <div class="list-content">
+                            <h4>游吟诗人艾莉</h4>
+                            <p>贡献了 45 个传说故事</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="sidebar-widget">
+                    <h3 class="widget-title">快速导航</h3>
+                    <ul style="font-size: 0.9rem; line-height: 2;">
+                        <li><a href="#">🔥 热门推荐</a></li>
+                        <li><a href="#">📖 魔法分类</a></li>
+                        <li><a href="#">⚔️ 武器装备</a></li>
+                        <li><a href="#">🏰 地下城地图</a></li>
+                        <li><a href="#">📜 历史档案</a></li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+
+        <!-- FAQ Section -->
+        <section>
+            <div class="section-header">
+                <h2 class="section-title">常见问题 (FAQ)</h2>
+            </div>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        如何获取稀有物品的坐标？
+                        <span class="faq-icon">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>请查看我们最新的地下城地图板块，或者加入我们的冒险者公会，与其他成员交流情报。</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        可以在宝库发布自己的创作吗？
+                        <span class="faq-icon">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>当然可以。只要你的内容符合内容规范，并且具有较高的知识价值，我们非常欢迎您的投稿。</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        魔法书的内容安全吗？
+                        <span class="faq-icon">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>所有收录的魔法书都经过严格的审核，确保其中不包含被禁止的黑暗咒语或危害社会的知识。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>关于阿尔卡冯</h4>
+                    <p style="font-size: 0.9rem; color: #bdc3c7;">致力于为奇幻爱好者提供最全面、最权威的资料库。让我们一起守护知识的火种。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>资源分类</h4>
+                    <ul>
+                        <li><a href="#">魔法与咒语</a></li>
+                        <li><a href="#">炼金材料</a></li>
+                        <li><a href="#">怪物图鉴</a></li>
+                        <li><a href="#">历史文献</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>联系方式</h4>
+                    <ul>
+                        <li>邮箱: contact@alcavon-archives.com</li>
+                        <li>公会频道: #magic-library</li>
+                        <li>地址: 第七大陆 - 魔法学院地下室</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 阿尔卡冯的宝库. 保留所有魔法权利.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple FAQ Toggle Logic
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    // Close others
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    // Toggle current
+                    item.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</body>
+                      </html>
